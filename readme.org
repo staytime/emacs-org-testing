@@ -1,0 +1,91 @@
+#+TITLE: Org Mode testing
+#+DATE: <2022-10-20 Thu>
+#+Author: elliott.syu@gmail.com
+
+* Base functional
+
+** Table
+Operation
+- pressing "tab" to realign "|" char
+- pressing "M-LEFT" or "M-RIGHT" to move column left and right
+- pressing "M-UP" or "M-DOWN" to move row up and down
+
+| Name                          | Age | Note |
+| elliott                       |  30 | me   |
+| ca                            |  20 |      |
+| lala                          |  29 |      |
+| very very very very long name |  99 |      |
+
+** Checkbox
+org-toggle-checkbox (C-c C-x C-b)
+
+1. [ ] First item
+2. [ ] Second
+3. [ ] Three
+
+* Run stuff in org mode
+
+#+begin_src emacs-lisp
+  (defun my-test-lisp ()
+    (message "Hello!"))
+
+  (my-test-lisp)
+#+end_src
+
+#+RESULTS:
+: Hello!
+
+#+begin_src python
+  print('hello!')
+#+end_src
+
+#+RESULTS:
+
+* Link & Image
+** Inserting link
+"org-insert-link" (C-c C-l)
+
+Insert a link [[https://orgmode.org/][Like this]]
+
+** Following link
+"org-open-at-point" (C-c C-o)
+
+(helpful-callable 'org-insert-link)
+
+** Link to code
+following link will run a elisp code
+[[elisp:(helpful-callable 'org-insert-link)][helpful page]]
+
+** View raw description of link
+"org-toggle-link-display"
+Toggle the literal or descriptive display of links.
+
+or using custome function
+
+#+begin_src elisp
+  (defun staytime/org-toggle-display ()
+    (interactive)
+    (org-toggle-link-display)
+    (if org-link-descriptive (org-display-inline-images) (org-remove-inline-images)))
+#+end_src
+
+#+RESULTS:
+
+** Display image
+There 3 command for inline image
+- "org-toggle-inline-images"
+- "org-display-inline-images"
+- "org-remove-inline-images"
+
+[[file:./house-g777b3c5aa_640.png]]
+Copyright free image src [[https://pixabay.com/vectors/house-home-doodle-building-7497002/][source]]
+
+
+* Todo list
+"org-todo" (C-c t) funcion be use to toggle todo item
+
+** TODO work
+** TODO job
+
+* Export to other format
+"org-export-dispatch" (C-c C-e)
