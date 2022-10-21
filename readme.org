@@ -78,6 +78,7 @@ There 3 command for inline image
 - "org-remove-inline-images"
 
 [[file:./house-g777b3c5aa_640.png]]
+
 Copyright free image src [[https://pixabay.com/vectors/house-home-doodle-building-7497002/][source]]
 
 
