@@ -1,6 +1,7 @@
 #+TITLE: Org Mode testing
 #+DATE: <2022-10-20 Thu>
 #+Author: elliott.syu@gmail.com
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
 #+ATTR_ORG: :width 100%
 [[file:screenshot.png]]
@@ -96,6 +97,10 @@ Copyright free image src [[https://pixabay.com/vectors/house-home-doodle-buildin
 
 ** TODO work
 ** TODO job
+** TODO love
 
 * Export to other format
 "org-export-dispatch" (C-c C-e)
+
+** Theme
+ReadTheOrg [[https://github.com/fniessen/org-html-themes/tree/master/org][link]]
