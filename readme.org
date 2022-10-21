@@ -2,6 +2,9 @@
 #+DATE: <2022-10-20 Thu>
 #+Author: elliott.syu@gmail.com
 
+#+ATTR_ORG: :width 100%
+[[file:screenshot.png]]
+
 * Base functional
 
 ** Table
@@ -18,12 +21,18 @@ Operation
 
 ** Checkbox
 org-toggle-checkbox (C-c C-x C-b)
+or
+"org-ctrl-c-ctrl-c" (C-c C-c)
+
 
 1. [ ] First item
 2. [ ] Second
 3. [ ] Three
 
 * Run stuff in org mode
+"org-confirm-babel-evaluate"
+or
+"org-ctrl-c-ctrl-c" (C-c C-c)
 
 #+begin_src emacs-lisp
   (defun my-test-lisp ()
@@ -52,7 +61,7 @@ Insert a link [[https://orgmode.org/][Like this]]
 
 (helpful-callable 'org-insert-link)
 
-** Link to code
+** Inline code with link
 following link will run a elisp code
 [[elisp:(helpful-callable 'org-insert-link)][helpful page]]
 
