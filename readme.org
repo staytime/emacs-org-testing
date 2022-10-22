@@ -3,11 +3,10 @@
 #+Author: elliott.syu@gmail.com
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 
-#+ATTR_ORG: :width 100%
+#+ATTR_ORG: :width 60%
 [[file:screenshot.png]]
 
 * Base functional
-
 ** Table
 Operation
 - pressing "tab" to realign "|" char
@@ -64,7 +63,7 @@ Insert a link [[https://orgmode.org/][Like this]]
 
 ** Inline code with link
 following link will run a elisp code
-[[elisp:(helpful-callable 'org-insert-link)][helpful page]]
+[[elisp:(helpful-callable 'org-insert-link)][=>helpful page]] (May not show on some plafrom)
 
 ** View raw description of link
 "org-toggle-link-display"
@@ -91,7 +90,6 @@ There 3 command for inline image
 
 Copyright free image src [[https://pixabay.com/vectors/house-home-doodle-building-7497002/][source]]
 
-
 * Todo list
 "org-todo" (C-c t) funcion be use to toggle todo item
 
@@ -104,3 +102,10 @@ Copyright free image src [[https://pixabay.com/vectors/house-home-doodle-buildin
 
 ** Theme
 ReadTheOrg [[https://github.com/fniessen/org-html-themes/tree/master/org][link]]
+
+* Timestamp
+inserting timestamp with "org-time-stamp" (C-c .)
+
+<2022-10-22 Sat>
+
+[[https://orgmode.org/manual/Timestamps.html#:~:text=The%20Org%20date%20format%20is,day%20name%2C%20for%20reading%20convenience.][Document]]
