@@ -24,6 +24,8 @@ org-toggle-checkbox (C-c C-x C-b)
 or
 "org-ctrl-c-ctrl-c" (C-c C-c)
 
+"org-meta-return" (M-RET)
+Insert a new heading or wrap a region in a table.
 
 1. [ ] First item
 2. [ ] Second
@@ -63,10 +65,12 @@ Insert a link [[https://orgmode.org/][Like this]]
 
 ** Inline code with link
 following link will run a elisp code
+
 [[elisp:(helpful-callable 'org-insert-link)][=>helpful page]] (May not show on some plafrom)
 
 ** View raw description of link
 "org-toggle-link-display"
+
 Toggle the literal or descriptive display of links.
 
 or using custome function
